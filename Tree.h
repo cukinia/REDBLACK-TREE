@@ -8,11 +8,13 @@ class Tree{
 public:
     Tree();
     ~Tree();
+	Node* root;
     Node* s;
     bool search(int);
+	bool search(Node*, int);
 	Node* getNodeParent(int);
     void insert(int);
-    void deleteElem(int);
+    /*void deleteElem(int);*/
 
 };
 

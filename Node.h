@@ -14,16 +14,16 @@ enum color { BLACK, RED };
 class Node{
 public:
     Node(int value, Node* s);
-    Node(Node& );
-    const Node& operator=(Node& );
     ~Node() {}
     Node* parent;
     Node* left;
     Node* right;
     int cont;
     color c;
-
     string print() const;
+private:
+	Node(Node&);
+    const Node& operator=(Node&);
 };
 
 

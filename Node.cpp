@@ -1,11 +1,5 @@
 #include "Node.h"
-//#include<sstream>
-
-string operator+(const string& lhs, const string& rhs) {
-	string result = lhs;
-	result += rhs;
-	return result;
-}
+#include<sstream>
 /*
  *  Main constructor
  */
@@ -15,8 +9,17 @@ Node::Node(int value, Node* s):  parent(s), left(s), right(s), cont(value), c(RE
  */
 string Node::print() const {
 	string result = (c==RED)? "R:" : "B:";
-	//stringstream ss;
-	//ss << cont;
-	//result += ss.str();
+	stringstream ss;
+	ss << cont;
+	result += ss.str();
 	return result;
 }
+
+
+
+
+/*string operator+(const string& lhs, const string& rhs) {
+	string result = lhs;
+	result += rhs;
+	return result;
+}*/
