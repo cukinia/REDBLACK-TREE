@@ -31,8 +31,7 @@ void Tree::insert(int value){
 			current = current->left;
 		}
 	}
-	current = current->parent->right;
-	current = new Node(value, s);
+	(son == RIGHT) ? current->parent->right = new Node(value, s) : current->parent->left = new Node(value, s);
 }
 /*
 void Tree::deleteElem(int value){
